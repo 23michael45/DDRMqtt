@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{e6c54fb5-4180-4641-8eab-596d2dbac230}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\thirdparty">
+      <UniqueIdentifier>{f9f2b9c7-015d-4803-ab90-692e70590c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\thirdparty\mqtt">
+      <UniqueIdentifier>{63cfe92c-9ea0-4859-aacd-df2f8fbdd6e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Network">
+      <UniqueIdentifier>{a8e91df3-02e4-4287-a6d1-10013b0252f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\thirdparty\mqtt\c">
+      <UniqueIdentifier>{7d9174c4-9a55-4c75-a731-2aa71a8099a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\thirdparty\mqtt\cpp">
+      <UniqueIdentifier>{95791119-97e7-4610-8074-e8a0a1d63bfe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="publish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="subscribe.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\src\Network\MQTTAsyncClient.cpp">
+      <Filter>Shared\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Base64.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Clients.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Heap.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\LinkedList.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Log.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Messages.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTAsync.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTPacket.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTPacketOut.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTPersistence.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTPersistenceDefault.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTProperties.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTProtocolClient.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTProtocolOut.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\MQTTReasonCodes.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\SHA1.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Socket.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\SocketBuffer.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\StackTrace.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Thread.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Tree.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\utf-8.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\WebSocket.c">
+      <Filter>Shared\thirdparty\mqtt\c</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\async_client.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\client.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\connect_options.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\disconnect_options.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\iclient_persistence.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\message.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\response_options.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\ssl_options.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\string_collection.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\token.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\topic.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\will_options.cpp">
+      <Filter>Shared\thirdparty\mqtt\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="publish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="subscribe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\src\Network\MQTTAsyncClient.h">
+      <Filter>Shared\Network</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
