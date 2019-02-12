@@ -113,10 +113,18 @@ int main(int argc, char* argv[])
 			client.Subscribe(TOPIC);
 
 
-			while (std::tolower(std::cin.get()) != 'q')
+			char c;
+			do 
 			{
-				;
-			}
+				c = std::tolower(std::cin.get());
+
+				if (c == 'p')
+				{
+
+					client.Publish(TOPIC, GetJsonStr());
+				}
+
+			} while (c != 'q');
 
 		}
 		else if (*argv[1] == 'p')
