@@ -31,6 +31,9 @@
     <Filter Include="Shared\thirdparty\mqtt\cpp">
       <UniqueIdentifier>{95791119-97e7-4610-8074-e8a0a1d63bfe}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Shared\thirdparty\jsoncpp">
+      <UniqueIdentifier>{c2317586-5252-4944-a4d9-aa10aa9417ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -150,6 +153,18 @@
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\will_options.cpp">
       <Filter>Shared\thirdparty\mqtt\cpp</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_reader.cpp">
+      <Filter>Shared\thirdparty\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_value.cpp">
+      <Filter>Shared\thirdparty\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_writer.cpp">
+      <Filter>Shared\thirdparty\jsoncpp</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonProto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="publish.h">
@@ -160,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="..\..\Shared\src\Network\MQTTAsyncClient.h">
       <Filter>Shared\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonProto.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

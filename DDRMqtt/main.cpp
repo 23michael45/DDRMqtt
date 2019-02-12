@@ -5,6 +5,8 @@
 #include <string>
 #include <cctype>
 
+#include "JsonProto.h"
+
 int main_dep(int argc, char* argv[])
 {
 	if (argc == 2)
@@ -33,7 +35,16 @@ void OnMsgArrived(std::string topic, std::string content)
 {
 	std::cout << "Message arrived" << std::endl;
 	std::cout << "\ttopic: '" << topic << "'" << std::endl;
-	std::cout << "\tpayload: '" << content << "'\n" << std::endl;
+
+
+
+	DDRStatus status;
+	CJsonSerializer::Deserialize(&status,content);
+
+	std::cout << "\tname: '" << status.Name << "'\n" << std::endl;
+	std::cout << "\tlspeed: '" << status.LineSpeed << "'\n" << std::endl;
+	std::cout << "\tangspeed: '" << status.AngSpeed << "'\n" << std::endl;
+
 
 
 }
@@ -55,11 +66,28 @@ void OnDeliveryComplete(mqtt::delivery_token_ptr token)
 }
 
 
+std::string GetJsonStr()
+{
+
+	DDRStatus status;
+	status.Name = "JN";
+	status.LineSpeed = 123;
+	status.AngSpeed = 987;
+	status.IntArray.push_back(3);
+	status.IntArray.push_back(4);
+
+	std::string jsonStr;
+	CJsonSerializer::Serialize(&status, jsonStr);
+
+	return jsonStr;
+}
+
 int main(int argc, char* argv[])
 {
 	std::string ADDRESS = "tcp://iot.eclipse.org:1883";
-	std::string  TOPIC = "MQTT Examples";
-	std::string  PAYLOAD = "Hello World!";
+	std::string  TOPIC = "DDRStatus";
+
+
 
 
 	if (argc == 2)
@@ -68,7 +96,7 @@ int main(int argc, char* argv[])
 		{
 			printf("Subscribe");
 
-			std::string  CLIENTID = "ExampleClientSub";
+			std::string  CLIENTID = "DDR Subscribe";
 			DDRFramework::MQTTAsyncClient client(ADDRESS, CLIENTID);
 			client.m_OnConnect = OnConnect;
 			client.m_OnConnectionLost = OnConnectionLost;
@@ -95,7 +123,7 @@ int main(int argc, char* argv[])
 		{
 			printf("Publish");
 
-			std::string  CLIENTID = "ExampleClientPub";
+			std::string  CLIENTID = "DDR Publish";
 			DDRFramework::MQTTAsyncClient client(ADDRESS, CLIENTID);
 			client.m_OnConnect = OnConnect;
 			client.m_OnConnectionLost = OnConnectionLost;
@@ -103,12 +131,17 @@ int main(int argc, char* argv[])
 			client.m_OnDeliveryComplete = OnDeliveryComplete;
 
 			client.Connect();
-			client.Publish(TOPIC,PAYLOAD);
+
+
+
+
+
+			client.Publish(TOPIC, GetJsonStr());
 		}
 	}
 	else
 	{
-		std::string  CLIENTID = "ExampleClientPub";
+		std::string  CLIENTID = "DDR Publish";
 		DDRFramework::MQTTAsyncClient client(ADDRESS, CLIENTID);
 		client.m_OnConnect = OnConnect;
 		client.m_OnConnectionLost = OnConnectionLost;
@@ -116,7 +149,9 @@ int main(int argc, char* argv[])
 		client.m_OnDeliveryComplete = OnDeliveryComplete;
 
 		client.Connect();
-		client.Publish(TOPIC, PAYLOAD);
+
+
+		client.Publish(TOPIC, GetJsonStr());
 		//MQTT_PUBLISH::mqtt_publish();
 		//MQTT_SUBSCRIBE::mqtt_subscribe();
 	}

@@ -157,6 +157,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Shared\src\Network\MQTTAsyncClient.cpp" />
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_reader.cpp" />
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_value.cpp" />
+    <ClCompile Include="..\..\Shared\thirdparty\jsoncpp\src\json_writer.cpp" />
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\async_client.cpp" />
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\client.cpp" />
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\cpp\connect_options.cpp" />
@@ -192,12 +195,14 @@
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\Tree.c" />
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\utf-8.c" />
     <ClCompile Include="..\..\Shared\thirdparty\mqtt\c\WebSocket.c" />
+    <ClCompile Include="JsonProto.cpp" />
     <ClCompile Include="publish.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="subscribe.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Shared\src\Network\MQTTAsyncClient.h" />
+    <ClInclude Include="JsonProto.h" />
     <ClInclude Include="publish.h" />
     <ClInclude Include="subscribe.h" />
   </ItemGroup>
